@@ -15,8 +15,9 @@
   "author": "Sentrei, Inc.",
   "scripts": {
     "build": "yarn build:sol && yarn build:ts",
-    "build:sol": "npx hardhat compile",
+    "build:sol": "yarn run compile",
     "build:ts": "tsc -p .",
+    "compile": "npx hardhat compile",
     "export": "hardhat export --export-all ../generated/contracts/hardhat_contracts.json",
     "hardhat": "npx hardhat",
     "task:accounts": "npx hardhat accounts",
