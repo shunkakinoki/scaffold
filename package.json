@@ -1,0 +1,72 @@
+{
+  "name": "@sentrei/scaffold",
+  "version": "1.0.0",
+  "private": true,
+  "description": "",
+  "homepage": "https://scaffold.sentrei.com",
+  "bugs": {
+    "url": "https://github.com/sentrei/scaffold/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sentrei/scaffold.git"
+  },
+  "license": "MIT",
+  "author": "Sentrei, Inc.",
+  "workspaces": {
+    "packages": [
+      "packages/contracts",
+      "packages/subgraph",
+      "packages/web"
+    ],
+    "nohoist": [
+      "**/@graphprotocol/graph-ts",
+      "**/@graphprotocol/graph-ts/**",
+      "**/hardhat",
+      "**/hardhat/**",
+      "**/hardhat-ts",
+      "**/hardhat-ts/**"
+    ]
+  },
+  "scripts": {
+    "build": "yarn build:sol && yarn build:ts",
+    "build:sol": "npx hardhat compile",
+    "build:ts": "tsc -p .",
+    "clean": "npx hardhat clean",
+    "env:pull": "doppler secrets download --no-file --format env > .env",
+    "eslint:cmd": "eslint --config .eslintrc.js --ignore-path .gitignore --cache --cache-location ./node_modules/.cache/eslint",
+    "eslint:fix": "yarn run eslint:cmd . --fix",
+    "eslint:lint": "yarn run eslint:cmd .",
+    "fix": "concurrently 'yarn:*:fix'",
+    "hardhat": "npx hardhat",
+    "lint": "concurrently 'yarn:*:lint'",
+    "multi-semantic-release": "multi-semantic-release --sequential-init",
+    "multi-semantic-release:check": "multi-semantic-release --dry-run --sequential-init",
+    "ncu:check": "ncu --deep -p yarn",
+    "ncu:upgrade": "ncu --deep -u -p yarn",
+    "npm-package-json:lint": "npmPkgJsonLint .",
+    "prepare": "husky install",
+    "prepublishOnly": "pinst --disable",
+    "prettier:cmd": "prettier --ignore-unknown",
+    "prettier:fix": "yarn run prettier:cmd --write .",
+    "prettier:lint": "yarn run prettier:cmd --check .",
+    "postpublish": "pinst --enable",
+    "release": "semantic-release",
+    "release:check": "semantic-release --dry-run",
+    "task:accounts": "npx hardhat accounts",
+    "test": "npx hardhat test",
+    "test:gas": "REPORT_GAS=true npx hardhat test"
+  },
+  "devDependencies": {
+    "@sentrei/kit": "^1.1.0",
+    "@shunkakinoki/eslint-config": "^1.1.23",
+    "@typechain/ethers-v5": "^7.1.2",
+    "@typechain/hardhat": "^2.3.0",
+    "@types/chai": "^4.2.22",
+    "@types/mocha": "^9.0.0",
+    "@types/node": "^16.10.3"
+  },
+  "npmpackagejsonlint": {
+    "extends": "@sentrei/npm-package-json-lint-config"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "solidity.enabledAsYouTypeCompilationErrorCheck": true,
+  "solidity.linter": "solhint",
+  "solidity.solhintRules": {
+    "avoid-sha3": "warn"
+  },
+  "terminal.integrated.env.osx": {
+    "ZSH_INIT_COMMAND": "mux start scaffold"
+  }
+}
