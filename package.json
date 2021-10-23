@@ -16,7 +16,7 @@
   "workspaces": {
     "packages": [
       "packages/eth",
-      "packages/subgraph",
+      "packages/graph",
       "packages/web"
     ],
     "nohoist": [
@@ -84,6 +84,10 @@
     "eslint-plugin-simple-import-sort": "^7.0.0",
     "eslint-plugin-tailwindcss": "^1.17.0",
     "npm-check-updates": "^11.8.5",
+    "prettier": "^2.4.1",
+    "prettier-plugin-packagejson": "^2.2.13",
+    "prettier-plugin-solidity": "^1.0.0-beta.18",
+    "prettier-plugin-sort-json": "^0.0.2",
     "typescript": "^4.4.4"
   },
   "npmpackagejsonlint": {

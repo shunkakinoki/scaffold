@@ -1,0 +1,23 @@
+{
+  "name": "@sentrei/graph",
+  "version": "1.0.0",
+  "private": false,
+  "description": "",
+  "homepage": "https://app.mosh.lol",
+  "bugs": {
+    "url": "https://github.com/sentrei/scaffold/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sentrei/scaffold.git"
+  },
+  "license": "MIT",
+  "author": "Sentrei, Inc.",
+  "dependencies": {
+    "@graphprotocol/graph-cli": "^0.22.4",
+    "@graphprotocol/graph-ts": "^0.22.1"
+  },
+  "devDependencies": {
+    "mustache": "^4.2.0"
+  }
+}
