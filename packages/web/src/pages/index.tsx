@@ -118,7 +118,7 @@ export const HomePage = () => {
       loading={null}
     >
       <Suspense fallback="Loading...">
-        <RequireNetwork chainId={1337} fallback={<SwitchNetwork />}>
+        <RequireNetwork chainId={31337} fallback={<SwitchNetwork />}>
           <Home />
         </RequireNetwork>
       </Suspense>
