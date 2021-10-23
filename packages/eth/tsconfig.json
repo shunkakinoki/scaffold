@@ -7,10 +7,10 @@
     "module": "commonjs",
     "outDir": "./dist",
     "paths": {
-      "@/typechain": ["typechain/index.ts"],
-      "@/typechain/*": ["typechain/*"]
+      "@/typechain/*": ["typechain/*"],
+      "@/types/*": ["types/index.ts"]
     },
-    "rootDirs": ["./tasks", "./test"],
+    "rootDirs": ["./tasks", "./test", "./types"],
     "sourceMap": true,
     "strict": true,
     "target": "ES2017",
@@ -18,5 +18,5 @@
   },
   "exclude": ["**/node_modules"],
   "files": ["./hardhat.config.ts"],
-  "include": ["./tasks", "./test"]
+  "include": ["./tasks", "./test", "./types", "./hardhat.config.ts"]
 }

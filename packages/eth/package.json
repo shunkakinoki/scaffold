@@ -17,6 +17,7 @@
     "build": "yarn build:sol && yarn build:ts",
     "build:sol": "npx hardhat compile",
     "build:ts": "tsc -p .",
+    "export": "hardhat export --export-all ../generated/contracts/hardhat_contracts.json",
     "hardhat": "npx hardhat",
     "task:accounts": "npx hardhat accounts",
     "task:deploy:Greeter": "npx hardhat deploy:Greeter",
@@ -35,7 +36,8 @@
     "hardhat": "^2.6.5",
     "hardhat-gas-reporter": "^1.0.4",
     "solc": "^0.8.9",
-    "solidity-coverage": "^0.7.17"
+    "solidity-coverage": "^0.7.17",
+    "tsconfig-paths": "^3.11.0"
   },
   "devDependencies": {
     "@typechain/ethers-v5": "^7.1.2",
@@ -48,6 +50,7 @@
     "solhint": "^3.3.6",
     "solidity-coverage": "^0.7.17",
     "ts-node": "^10.3.0",
+    "tsconfig-paths": "^3.11.0",
     "typechain": "^5.1.2"
   },
   "npmpackagejsonlint": {

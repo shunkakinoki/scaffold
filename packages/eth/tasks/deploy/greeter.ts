@@ -1,7 +1,7 @@
 import { task } from "hardhat/config";
 import type { TaskArguments } from "hardhat/types";
 
-import type { Greeter } from "@/typechain";
+import type { Greeter } from "@/typechain/Greeter";
 
 task("deploy:Greeter")
   .addParam("greeting", "Say hello, be nice")
