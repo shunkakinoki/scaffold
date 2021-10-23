@@ -93,6 +93,7 @@ importers:
       '@nomiclabs/hardhat-ethers': npm:hardhat-deploy-ethers@^0.3.0-beta.11
       '@nomiclabs/hardhat-etherscan': ^2.1.7
       '@nomiclabs/hardhat-waffle': ^2.0.1
+      '@openzeppelin/contracts': ^4.3.2
       '@sentrei/next': ^1.13.6
       '@sentrei/postcss': ^1.4.5
       '@sentrei/tailwindcss': ^1.5.1
@@ -119,6 +120,7 @@ importers:
       '@nomiclabs/hardhat-ethers': /hardhat-deploy-ethers/0.3.0-beta.11_ethers@5.5.1+hardhat@2.6.7
       '@nomiclabs/hardhat-etherscan': 2.1.7_hardhat@2.6.7
       '@nomiclabs/hardhat-waffle': 2.0.1_dd91d8b8b892436c731b425d66f639b6
+      '@openzeppelin/contracts': 4.3.2
       '@sentrei/next': 1.13.6
       '@sentrei/postcss': 1.4.5
       '@sentrei/tailwindcss': 1.5.1_ts-node@10.4.0
@@ -1675,6 +1677,10 @@ packages:
     dependencies:
       '@octokit/openapi-types': 11.2.0
     dev: true
+
+  /@openzeppelin/contracts/4.3.2:
+    resolution: {integrity: sha512-AybF1cesONZStg5kWf6ao9OlqTZuPqddvprc0ky7lrUVOjXeKpmQ2Y9FK+6ygxasb+4aic4O5pneFBfwVsRRRg==}
+    dev: false
 
   /@panva/asn1.js/1.0.0:
     resolution: {integrity: sha512-UdkG3mLEqXgnlKsWanWcgb6dOjUzJ+XC5f+aWw30qrtjxeNUSfKX1cd5FBzOaXQumoe9nIqeZUvrRJS03HCCtw==}
