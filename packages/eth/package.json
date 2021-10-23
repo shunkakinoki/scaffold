@@ -18,14 +18,15 @@
     "build:sol": "yarn run compile",
     "build:ts": "tsc -p .",
     "clean": "yarn run clean:sol",
-    "clean:sol": "npx hardhat clean",
-    "compile": "npx hardhat compile --force",
+    "clean:sol": "hardhat clean",
+    "compile": "hardhat compile --force",
+    "coverage": "hardhat coverage",
     "export": "hardhat export --export-all ../generated/contracts/hardhat_contracts.json",
-    "hardhat": "npx hardhat",
-    "task:accounts": "npx hardhat accounts",
-    "task:deploy:Greeter": "npx hardhat deploy:Greeter",
-    "test": "npx hardhat test",
-    "test:gas": "REPORT_GAS=true npx hardhat test"
+    "hardhat": "hardhat",
+    "task:accounts": "hardhat accounts",
+    "task:deploy:Greeter": "hardhat deploy:Greeter",
+    "test": "hardhat test",
+    "test:gas": "REPORT_GAS=true hardhat test"
   },
   "dependencies": {
     "@nomiclabs/hardhat-ethers": "^2.0.2",
@@ -37,12 +38,14 @@
     "@typechain/hardhat": "^2.3.1",
     "ethers": "^5.5.1",
     "hardhat": "^2.6.7",
+    "hardhat-abi-exporter": "^2.3.0",
     "hardhat-gas-reporter": "^1.0.4",
     "solc": "^0.8.9",
     "solidity-coverage": "^0.7.17",
     "tsconfig-paths": "^3.11.0"
   },
   "devDependencies": {
+    "@float-capital/solidity-coverage": "^0.7.17",
     "@typechain/ethers-v5": "^7.2.0",
     "@typechain/hardhat": "^2.3.1",
     "@types/chai": "^4.2.22",
