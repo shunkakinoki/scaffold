@@ -26,32 +26,32 @@
   },
   "dependencies": {
     "@nomiclabs/hardhat-ethers": "^2.0.2",
-    "@nomiclabs/hardhat-etherscan": "^2.1.6",
+    "@nomiclabs/hardhat-etherscan": "^2.1.7",
     "@nomiclabs/hardhat-waffle": "^2.0.1",
     "@sentrei/next": "^1.13.6",
     "@sentrei/postcss": "^1.4.5",
     "@sentrei/tailwindcss": "^1.5.1",
-    "@typechain/hardhat": "^2.3.0",
-    "ethers": "^5.4.7",
-    "hardhat": "^2.6.5",
+    "@typechain/hardhat": "^2.3.1",
+    "ethers": "^5.5.1",
+    "hardhat": "^2.6.7",
     "hardhat-gas-reporter": "^1.0.4",
     "solc": "^0.8.9",
     "solidity-coverage": "^0.7.17",
     "tsconfig-paths": "^3.11.0"
   },
   "devDependencies": {
-    "@typechain/ethers-v5": "^7.1.2",
-    "@typechain/hardhat": "^2.3.0",
+    "@typechain/ethers-v5": "^7.2.0",
+    "@typechain/hardhat": "^2.3.1",
     "@types/chai": "^4.2.22",
     "@types/mocha": "^9.0.0",
-    "@types/node": "^16.10.3",
+    "@types/node": "^16.11.4",
     "chai": "^4.3.4",
     "ethereum-waffle": "^3.4.0",
     "solhint": "^3.3.6",
     "solidity-coverage": "^0.7.17",
-    "ts-node": "^10.3.0",
+    "ts-node": "^10.4.0",
     "tsconfig-paths": "^3.11.0",
-    "typechain": "^5.1.2"
+    "typechain": "^5.2.0"
   },
   "npmpackagejsonlint": {
     "extends": "@sentrei/npm-package-json-lint-config"

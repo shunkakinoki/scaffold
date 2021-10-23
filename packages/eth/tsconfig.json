@@ -10,7 +10,7 @@
       "@/typechain/*": ["typechain/*"],
       "@/types/*": ["types/index.ts"]
     },
-    "rootDirs": ["./tasks", "./test", "./types"],
+    "rootDirs": ["./tasks", "./test", "./types", "./scripts"],
     "sourceMap": true,
     "strict": true,
     "target": "ES2017",
@@ -18,5 +18,11 @@
   },
   "exclude": ["**/node_modules"],
   "files": ["./hardhat.config.ts"],
-  "include": ["./tasks", "./test", "./types", "./hardhat.config.ts"]
+  "include": [
+    "./scripts",
+    "./tasks",
+    "./test",
+    "./types",
+    "./hardhat.config.ts"
+  ]
 }
