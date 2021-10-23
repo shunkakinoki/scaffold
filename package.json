@@ -15,17 +15,15 @@
   "author": "Sentrei, Inc.",
   "workspaces": {
     "packages": [
-      "packages/contracts",
+      "packages/eth",
       "packages/subgraph",
       "packages/web"
     ],
     "nohoist": [
       "**/@graphprotocol/graph-ts",
       "**/@graphprotocol/graph-ts/**",
-      "**/hardhat",
-      "**/hardhat/**",
-      "**/hardhat-ts",
-      "**/hardhat-ts/**"
+      "**/eth",
+      "**/eth/**"
     ]
   },
   "scripts": {

@@ -1,0 +1,55 @@
+{
+  "name": "@sentrei/eth",
+  "version": "1.0.0",
+  "private": false,
+  "description": "",
+  "homepage": "https://app.mosh.lol",
+  "bugs": {
+    "url": "https://github.com/sentrei/scaffold/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sentrei/scaffold.git"
+  },
+  "license": "MIT",
+  "author": "Sentrei, Inc.",
+  "scripts": {
+    "build": "yarn build:sol && yarn build:ts",
+    "build:sol": "npx hardhat compile",
+    "build:ts": "tsc -p .",
+    "hardhat": "npx hardhat",
+    "task:accounts": "npx hardhat accounts",
+    "test": "npx hardhat test",
+    "test:gas": "REPORT_GAS=true npx hardhat test"
+  },
+  "dependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.0.2",
+    "@nomiclabs/hardhat-etherscan": "^2.1.6",
+    "@nomiclabs/hardhat-waffle": "^2.0.1",
+    "@sentrei/next": "^1.13.6",
+    "@sentrei/postcss": "^1.4.5",
+    "@sentrei/tailwindcss": "^1.5.1",
+    "@typechain/hardhat": "^2.3.0",
+    "ethers": "^5.4.7",
+    "hardhat": "^2.6.5",
+    "hardhat-gas-reporter": "^1.0.4",
+    "solc": "^0.8.9",
+    "solidity-coverage": "^0.7.17"
+  },
+  "devDependencies": {
+    "@typechain/ethers-v5": "^7.1.2",
+    "@typechain/hardhat": "^2.3.0",
+    "@types/chai": "^4.2.22",
+    "@types/mocha": "^9.0.0",
+    "@types/node": "^16.10.3",
+    "chai": "^4.3.4",
+    "ethereum-waffle": "^3.4.0",
+    "solhint": "^3.3.6",
+    "solidity-coverage": "^0.7.17",
+    "ts-node": "^10.3.0",
+    "typechain": "^5.1.2"
+  },
+  "npmpackagejsonlint": {
+    "extends": "@sentrei/npm-package-json-lint-config"
+  }
+}
