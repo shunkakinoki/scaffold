@@ -8,6 +8,7 @@ import "@nomiclabs/hardhat-etherscan";
 import "@nomiclabs/hardhat-waffle";
 import "@typechain/hardhat";
 import "hardhat-abi-exporter";
+import "hardhat-deploy";
 import "hardhat-gas-reporter";
 import "./tasks";
 
@@ -16,6 +17,11 @@ dotenv.config();
 const config: HardhatUserConfig = {
   solidity: "0.8.4",
   defaultNetwork: "hardhat",
+  namedAccounts: {
+    deployer: {
+      default: 0,
+    },
+  },
   networks: {
     ropsten: {
       url: process.env.ROPSTEN_URL || "",
