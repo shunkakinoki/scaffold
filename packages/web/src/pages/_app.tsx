@@ -11,7 +11,6 @@ const CustomApp = ({ Component, pageProps }: AppProps): JSX.Element => {
     <ThemeProvider attribute="class" defaultTheme="system">
       <WalletProvider
         cacheProvider
-        network="localhost"
         providerOptions={{
           walletconnect: {
             package: WalletConnectProvider,
@@ -20,11 +19,32 @@ const CustomApp = ({ Component, pageProps }: AppProps): JSX.Element => {
             },
           },
         }}
-        loading={null}
-        fallback={<></>}
+        loading={
+          <div className="dark:text-white">
+            <h3>Wallet Provider Loading...</h3>
+          </div>
+        }
+        fallback={
+          <div className="dark:text-white">
+            <h3>Wallet Fallback</h3>
+          </div>
+        }
       >
-        <Suspense fallback="Loading...">
-          <RequireNetwork chainId={1} fallback={<></>}>
+        <Suspense
+          fallback={
+            <div className="dark:text-white">
+              <h3>Suspense Loading...</h3>
+            </div>
+          }
+        >
+          <RequireNetwork
+            chainId={1}
+            fallback={
+              <div className="dark:text-white">
+                <h3>Network Fallback</h3>
+              </div>
+            }
+          >
             <Component {...pageProps} />
           </RequireNetwork>
         </Suspense>
