@@ -4,44 +4,47 @@ import { ThemeProvider } from "next-themes";
 import type { AppProps } from "next/app";
 import { Suspense } from "react";
 
+import { ErrorBoundary } from "react-error-boundary";
+
 import { ConnectButton } from "@/components/ConnectButton";
 import { SwitchNetwork } from "@/components/SwitchNetwork";
-
 import "tailwindcss/tailwind.css";
 
 const CustomApp = ({ Component, pageProps }: AppProps): JSX.Element => {
   return (
-    <ThemeProvider attribute="class" defaultTheme="system">
-      <WalletProvider
-        cacheProvider
-        providerOptions={{
-          walletconnect: {
-            package: WalletConnectProvider,
-            options: {
-              infuraId: process.env.NEXT_PUBLIC_INFURA_ID,
+    <ErrorBoundary fallback={<></>}>
+      <ThemeProvider attribute="class" defaultTheme="system">
+        <WalletProvider
+          cacheProvider
+          providerOptions={{
+            walletconnect: {
+              package: WalletConnectProvider,
+              options: {
+                infuraId: process.env.NEXT_PUBLIC_INFURA_ID,
+              },
             },
-          },
-        }}
-        loading={
-          <div className="dark:text-white">
-            <h3>Wallet Provider Loading...</h3>
-          </div>
-        }
-        fallback={<ConnectButton />}
-      >
-        <Suspense
-          fallback={
+          }}
+          loading={
             <div className="dark:text-white">
-              <h3>Suspense Loading...</h3>
+              <h3>Wallet Provider Loading...</h3>
             </div>
           }
+          fallback={<ConnectButton />}
         >
-          <RequireNetwork chainId={1337} fallback={<SwitchNetwork />}>
-            <Component {...pageProps} />
-          </RequireNetwork>
-        </Suspense>
-      </WalletProvider>
-    </ThemeProvider>
+          <Suspense
+            fallback={
+              <div className="dark:text-white">
+                <h3>Suspense Loading...</h3>
+              </div>
+            }
+          >
+            <RequireNetwork chainId={1337} fallback={<SwitchNetwork />}>
+              <Component {...pageProps} />
+            </RequireNetwork>
+          </Suspense>
+        </WalletProvider>
+      </ThemeProvider>
+    </ErrorBoundary>
   );
 };
 
