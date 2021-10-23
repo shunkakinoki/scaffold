@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
     "declaration": true,
     "declarationMap": true,
     "esModuleInterop": true,
@@ -7,7 +8,12 @@
     "outDir": "./dist",
     "sourceMap": true,
     "strict": true,
-    "target": "ES2017"
+    "target": "ES2017",
+    "paths": {
+      "@/deployments/*": ["./packages/eth/deployments/*"],
+      "@/typechain/*": ["./packages/eth/typechain/*"],
+      "@/types/*": ["./packages/types/index.ts"]
+    }
   },
   "exclude": ["dist", "node_modules"]
 }

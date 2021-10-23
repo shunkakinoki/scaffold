@@ -90,7 +90,7 @@ importers:
     specifiers:
       '@ethersproject/providers': ^5.5.0
       '@float-capital/solidity-coverage': ^0.7.17
-      '@nomiclabs/hardhat-ethers': npm:hardhat-deploy-ethers@^0.3.0-beta.11
+      '@nomiclabs/hardhat-ethers': ^2.0.2
       '@nomiclabs/hardhat-etherscan': ^2.1.7
       '@nomiclabs/hardhat-waffle': ^2.0.1
       '@openzeppelin/contracts': ^4.3.2
@@ -117,9 +117,9 @@ importers:
       typechain: ^5.2.0
     dependencies:
       '@ethersproject/providers': 5.5.0
-      '@nomiclabs/hardhat-ethers': /hardhat-deploy-ethers/0.3.0-beta.11_ethers@5.5.1+hardhat@2.6.7
+      '@nomiclabs/hardhat-ethers': 2.0.2_ethers@5.5.1+hardhat@2.6.7
       '@nomiclabs/hardhat-etherscan': 2.1.7_hardhat@2.6.7
-      '@nomiclabs/hardhat-waffle': 2.0.1_dd91d8b8b892436c731b425d66f639b6
+      '@nomiclabs/hardhat-waffle': 2.0.1_1c9cd65595a3655be9c549f07608e278
       '@openzeppelin/contracts': 4.3.2
       '@sentrei/next': 1.13.6
       '@sentrei/postcss': 1.4.5
@@ -1490,6 +1490,16 @@ packages:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.13.0
 
+  /@nomiclabs/hardhat-ethers/2.0.2_ethers@5.5.1+hardhat@2.6.7:
+    resolution: {integrity: sha512-6quxWe8wwS4X5v3Au8q1jOvXYEPkS1Fh+cME5u6AwNdnI4uERvPlVjlgRWzpnb+Rrt1l/cEqiNRH9GlsBMSDQg==}
+    peerDependencies:
+      ethers: ^5.0.0
+      hardhat: ^2.0.0
+    dependencies:
+      ethers: 5.5.1
+      hardhat: 2.6.7
+    dev: false
+
   /@nomiclabs/hardhat-etherscan/2.1.7_hardhat@2.6.7:
     resolution: {integrity: sha512-9nt9EXubnkd2aTMnQIqKtp80bQFhun88krfB31FN2wB0T54b8YuK0riG2d+EKq/D3t1Kb00oA7oFSFpHLIbLDQ==}
     peerDependencies:
@@ -1507,7 +1517,7 @@ packages:
       - supports-color
     dev: false
 
-  /@nomiclabs/hardhat-waffle/2.0.1_dd91d8b8b892436c731b425d66f639b6:
+  /@nomiclabs/hardhat-waffle/2.0.1_1c9cd65595a3655be9c549f07608e278:
     resolution: {integrity: sha512-2YR2V5zTiztSH9n8BYWgtv3Q+EL0N5Ltm1PAr5z20uAY4SkkfylJ98CIqt18XFvxTD5x4K2wKBzddjV9ViDAZQ==}
     peerDependencies:
       '@nomiclabs/hardhat-ethers': ^2.0.0
@@ -1515,7 +1525,7 @@ packages:
       ethers: ^5.0.0
       hardhat: ^2.0.0
     dependencies:
-      '@nomiclabs/hardhat-ethers': /hardhat-deploy-ethers/0.3.0-beta.11_ethers@5.5.1+hardhat@2.6.7
+      '@nomiclabs/hardhat-ethers': 2.0.2_ethers@5.5.1+hardhat@2.6.7
       '@types/sinon-chai': 3.2.5
       '@types/web3': 1.0.19
       ethereum-waffle: 3.4.0_typescript@4.4.4
@@ -2229,7 +2239,7 @@ packages:
     peerDependencies:
       tailwindcss: '>=2.0.0 || >=3.0.0-alpha.1'
     dependencies:
-      tailwindcss: 2.2.17_ts-node@10.4.0
+      tailwindcss: 2.2.17_autoprefixer@10.3.7
     dev: false
 
   /@tailwindcss/forms/0.3.4_tailwindcss@2.2.17:
@@ -2238,7 +2248,7 @@ packages:
       tailwindcss: '>=2.0.0'
     dependencies:
       mini-svg-data-uri: 1.4.3
-      tailwindcss: 2.2.17_ts-node@10.4.0
+      tailwindcss: 2.2.17_autoprefixer@10.3.7
     dev: false
 
   /@tailwindcss/line-clamp/0.2.2_tailwindcss@2.2.17:
@@ -2246,7 +2256,7 @@ packages:
     peerDependencies:
       tailwindcss: '>=2.0.0 || >=3.0.0-alpha.1'
     dependencies:
-      tailwindcss: 2.2.17_ts-node@10.4.0
+      tailwindcss: 2.2.17_autoprefixer@10.3.7
     dev: false
 
   /@tailwindcss/typography/0.4.1_tailwindcss@2.2.17:
@@ -2258,7 +2268,7 @@ packages:
       lodash.isplainobject: 4.0.6
       lodash.merge: 4.6.2
       lodash.uniq: 4.5.0
-      tailwindcss: 2.2.17_ts-node@10.4.0
+      tailwindcss: 2.2.17_autoprefixer@10.3.7
     dev: false
 
   /@tootallnate/once/1.1.2:
@@ -8133,16 +8143,6 @@ packages:
     peerDependencies:
       hardhat: ^2.0.0
     dependencies:
-      hardhat: 2.6.7
-    dev: false
-
-  /hardhat-deploy-ethers/0.3.0-beta.11_ethers@5.5.1+hardhat@2.6.7:
-    resolution: {integrity: sha512-HnniBGBYsFRQDXBy3bQ27i86pQQnHkN0Mxdwiu869jZURY2gDQ4OEZxcXItnWQqBjYiEaavVyw/Xle7qwKOBAg==}
-    peerDependencies:
-      ethers: ^5.0.0
-      hardhat: ^2.0.0
-    dependencies:
-      ethers: 5.5.1
       hardhat: 2.6.7
     dev: false
 
