@@ -19,6 +19,7 @@
     "build:ts": "tsc -p .",
     "hardhat": "npx hardhat",
     "task:accounts": "npx hardhat accounts",
+    "task:deploy:Greeter": "npx hardhat deploy:Greeter",
     "test": "npx hardhat test",
     "test:gas": "REPORT_GAS=true npx hardhat test"
   },

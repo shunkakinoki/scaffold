@@ -1,10 +1,15 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
     "declaration": true,
     "declarationMap": true,
     "esModuleInterop": true,
     "module": "commonjs",
     "outDir": "./dist",
+    "paths": {
+      "@/typechain": ["typechain/index.ts"],
+      "@/typechain/*": ["typechain/*"]
+    },
     "rootDirs": ["./tasks", "./test"],
     "sourceMap": true,
     "strict": true,
