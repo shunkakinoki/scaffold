@@ -1,8 +1,8 @@
 {
+  "extends": "../../tsconfig.json",
   "compileOnSave": true,
   "compilerOptions": {
     "allowJs": true,
-    "baseUrl": ".",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "incremental": true,
@@ -12,12 +12,7 @@
     "module": "esnext",
     "moduleResolution": "node",
     "noEmit": true,
-    "paths": {
-      "@/*": ["src/*"],
-      "@/packageJson": ["package.json"]
-    },
     "resolveJsonModule": true,
-    "rootDir": ".",
     "skipLibCheck": true,
     "strict": false,
     "target": "es5"

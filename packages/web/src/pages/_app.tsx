@@ -4,6 +4,9 @@ import { ThemeProvider } from "next-themes";
 import type { AppProps } from "next/app";
 import { Suspense } from "react";
 
+import { ConnectButton } from "@/components/ConnectButton";
+import { SwitchNetwork } from "@/components/SwitchNetwork";
+
 import "tailwindcss/tailwind.css";
 
 const CustomApp = ({ Component, pageProps }: AppProps): JSX.Element => {
@@ -24,11 +27,7 @@ const CustomApp = ({ Component, pageProps }: AppProps): JSX.Element => {
             <h3>Wallet Provider Loading...</h3>
           </div>
         }
-        fallback={
-          <div className="dark:text-white">
-            <h3>Wallet Fallback</h3>
-          </div>
-        }
+        fallback={<ConnectButton />}
       >
         <Suspense
           fallback={
@@ -37,14 +36,7 @@ const CustomApp = ({ Component, pageProps }: AppProps): JSX.Element => {
             </div>
           }
         >
-          <RequireNetwork
-            chainId={1}
-            fallback={
-              <div className="dark:text-white">
-                <h3>Network Fallback</h3>
-              </div>
-            }
-          >
+          <RequireNetwork chainId={1337} fallback={<SwitchNetwork />}>
             <Component {...pageProps} />
           </RequireNetwork>
         </Suspense>

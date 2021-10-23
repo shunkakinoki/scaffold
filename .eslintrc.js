@@ -139,5 +139,14 @@ module.exports = {
     react: {
       version: "detect",
     },
+    tailwindcss: {
+      callees: ["classnames", "clsx", "ctl"],
+      config: "./packages/web/tailwind.config.js",
+      cssFiles: ["**/*.css", "!**/node_modules"],
+      groupByResponsive: false,
+      prependCustom: true,
+      removeDuplicates: true,
+      whitelist: [],
+    },
   },
 };

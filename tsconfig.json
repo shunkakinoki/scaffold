@@ -10,6 +10,7 @@
     "strict": true,
     "target": "ES2017",
     "paths": {
+      "@/components/*": ["./packages/web/src/components/*"],
       "@/deployments/*": ["./packages/eth/deployments/*"],
       "@/typechain/*": ["./packages/eth/typechain/*"],
       "@/types/*": ["./packages/types/index.ts"]
