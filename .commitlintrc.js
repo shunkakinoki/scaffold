@@ -1,3 +1,3 @@
 module.exports = {
-  extends: ["@sentrei/commitlint"],
+  extends: ["@commitlint/config-conventional"],
 };

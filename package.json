@@ -57,7 +57,7 @@
     "test:gas": "REPORT_GAS=true npx hardhat test"
   },
   "devDependencies": {
-    "@sentrei/commitlint": "^1.2.2",
+    "@commitlint/config-conventional": "^13.2.0",
     "@sentrei/npm-package-json-lint-config": "^1.1.0",
     "@sentrei/semantic-release": "^1.5.3",
     "@typechain/ethers-v5": "^7.2.0",
