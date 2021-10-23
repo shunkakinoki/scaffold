@@ -6,13 +6,13 @@ const deploy = async ({
 }: HardhatRuntimeEnvironment) => {
   const { deploy } = deployments;
   const { deployer } = await getNamedAccounts();
-  await deploy("Greeter", {
-    args: ["Hello, world!"],
+  await deploy("TechStack", {
+    args: [],
     from: deployer,
     log: true,
   });
 };
 
-deploy.tags = ["Greeter"];
+deploy.tags = ["TechStack"];
 
 export default deploy;
