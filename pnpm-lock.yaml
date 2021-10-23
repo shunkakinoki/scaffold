@@ -9,7 +9,6 @@ importers:
       '@semantic-release/exec': ^6.0.1
       '@semantic-release/git': ^10.0.0
       '@sentrei/npm-package-json-lint-config': ^1.1.0
-      '@sentrei/semantic-release': ^1.5.3
       '@typechain/ethers-v5': ^7.2.0
       '@typechain/hardhat': ^2.3.1
       '@types/chai': ^4.2.22
@@ -49,7 +48,6 @@ importers:
       '@semantic-release/exec': 6.0.1_semantic-release@18.0.0
       '@semantic-release/git': 10.0.0_semantic-release@18.0.0
       '@sentrei/npm-package-json-lint-config': 1.1.0
-      '@sentrei/semantic-release': 1.5.3
       '@typechain/ethers-v5': 7.2.0_typescript@4.4.4
       '@typechain/hardhat': 2.3.1
       '@types/chai': 4.2.22
@@ -163,6 +161,8 @@ importers:
       ethereal-react: ^0.4.0
       ethers: ^5.5.1
       next: ^11.1.2
+      next-seo: ^4.28.1
+      next-themes: ^0.0.15
       react: ^18.0.0-alpha-3c4c1c470-20211021
       react-dom: ^18.0.0-alpha-3c4c1c470-20211021
       react-error-boundary: ^3.1.3
@@ -178,6 +178,8 @@ importers:
       ethereal-react: 0.4.0_407efa8c7e96a82429951a966560b5fa
       ethers: 5.5.1
       next: 11.1.2_a6c6fcc82c21b14fc317b62586a7d9bf
+      next-seo: 4.28.1_f408b9c920beb3db1be480abba8d351b
+      next-themes: 0.0.15_f408b9c920beb3db1be480abba8d351b
       react: 18.0.0-alpha-3c4c1c470-20211021
       react-dom: 18.0.0-alpha-3c4c1c470-20211021_2fae0a0c89c2df0459360cd45f728ca2
       react-error-boundary: 3.1.3_2fae0a0c89c2df0459360cd45f728ca2
@@ -1938,17 +1940,6 @@ packages:
     transitivePeerDependencies:
       - webpack
     dev: false
-
-  /@sentrei/semantic-release/1.5.3:
-    resolution: {integrity: sha512-oy4rFgvkorgQyfMxKYq1MdsZwBXCtf7O8g7k/m/NyKE7+xuhHtocEva7FLnWQ/QJUPi8LdgNVISL1cK46D1ftw==}
-    dependencies:
-      '@semantic-release/changelog': 6.0.0_semantic-release@18.0.0
-      '@semantic-release/exec': 6.0.1_semantic-release@18.0.0
-      '@semantic-release/git': 10.0.0_semantic-release@18.0.0
-      semantic-release: 18.0.0
-    transitivePeerDependencies:
-      - supports-color
-    dev: true
 
   /@sentrei/tailwindcss/1.5.1_ts-node@10.4.0:
     resolution: {integrity: sha512-IQIaQ6VjUq//nat0ozuD25uOUIG8XBqRSEED0qdBz65ROS4Lxmb/Poih+oXYLkFpT9NcFuMs6YApyC6oTZeWcw==}
@@ -11110,6 +11101,18 @@ packages:
       react-dom: 17.0.2_react@17.0.2
     dev: false
 
+  /next-seo/4.28.1_f408b9c920beb3db1be480abba8d351b:
+    resolution: {integrity: sha512-WZgwdM+UhpNF3A37zFllzmPhnOVJ9vYeYlc0n3Z/kYfz/QQgy8NEdncNNggS9dU4JD8xriaCcyknhy5OsrFsJw==}
+    peerDependencies:
+      next: ^8.1.1-canary.54 || >=9.0.0
+      react: '>=16.0.0'
+      react-dom: '>=16.0.0'
+    dependencies:
+      next: 11.1.2_a6c6fcc82c21b14fc317b62586a7d9bf
+      react: 18.0.0-alpha-3c4c1c470-20211021
+      react-dom: 18.0.0-alpha-3c4c1c470-20211021_2fae0a0c89c2df0459360cd45f728ca2
+    dev: false
+
   /next-sitemap/1.6.192_next@11.1.3-canary.97:
     resolution: {integrity: sha512-Pvxi5ttn/pedojrCvhGrvXsXg0bSV/scWCLrivO1xeBd+OVGiFyn60WHfx7I0HfW7nFQmbvwGfYffkUMOj/ptg==}
     hasBin: true
@@ -11132,6 +11135,18 @@ packages:
       next: 11.1.3-canary.97_react-dom@17.0.2+react@17.0.2
       react: 17.0.2
       react-dom: 17.0.2_react@17.0.2
+    dev: false
+
+  /next-themes/0.0.15_f408b9c920beb3db1be480abba8d351b:
+    resolution: {integrity: sha512-LTmtqYi03c4gMTJmWwVK9XkHL7h0/+XrtR970Ujvtu3s0kZNeJN24aJsi4rkZOI8i19+qq6f8j+8Duwy5jqcrQ==}
+    peerDependencies:
+      next: '*'
+      react: '*'
+      react-dom: '*'
+    dependencies:
+      next: 11.1.2_a6c6fcc82c21b14fc317b62586a7d9bf
+      react: 18.0.0-alpha-3c4c1c470-20211021
+      react-dom: 18.0.0-alpha-3c4c1c470-20211021_2fae0a0c89c2df0459360cd45f728ca2
     dev: false
 
   /next-tick/1.0.0:
